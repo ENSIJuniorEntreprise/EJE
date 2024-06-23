@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 const ArticlePopup = ({ togglePopup, fetchData }) => {
-    const BaseUrl = "http://102.211.210.43/api"
+    const BaseUrl = "https://ej-ebackend.vercel.app"
 
     const [newArticleData, setNewArticleData] = useState({
         title: '',

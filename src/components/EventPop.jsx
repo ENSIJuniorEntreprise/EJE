@@ -75,7 +75,7 @@ const EventPop = ({ togglePopup, fetchData }) => {
       const currentDate = new Date().toISOString().split('T')[0];
       const eventDataWithDate = { ...newEventData, date: currentDate };
 
-      const res = await axios.post("http://102.211.210.43/api/event", eventDataWithDate);
+      const res = await axios.post("https://ej-ebackend.vercel.app/event", eventDataWithDate);
       console.log("New event added:", res.data);
       togglePopup();
       fetchData();

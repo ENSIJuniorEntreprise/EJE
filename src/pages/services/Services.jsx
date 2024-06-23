@@ -5,10 +5,9 @@ import ServiceComponent from "./ServiceComponent";
 import DownloadButton from "./DownloadButton";
 import ContactButton from "./ContactButton";
 import { useParams,useNavigate } from "react-router-dom";
-import web from "/assets/web.jpg"
+import web from "/assets/web.png"
 import mobile from "/assets/Mobile App.jpg"
 import chatbot from "/assets/chatbot.jpg"
-import Desktop from "/assets/Desktop.jpg"
 
 
 
@@ -118,7 +117,7 @@ export function Services() {
         subtitle: "Robust Solutions for Your Business",
         content:
             "Elevate your business operations with our comprehensive desktop development services. Create powerful, efficient, and user-friendly desktop applications tailored to your needs.",
-        image: Desktop,
+        image: web,
         features: [
             "Custom Software Development",
             "High Performance",

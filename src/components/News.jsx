@@ -12,7 +12,7 @@ function News(){
 
 
   useEffect(() => {
-    fetch('http://102.211.210.43/api/article/recent')
+    fetch('https://ej-ebackend.vercel.app/article/recent')
       .then(response => response.json())
       .then(data => setArticles(data.articles))
       .catch(error => console.error('Error fetching articles:', error));

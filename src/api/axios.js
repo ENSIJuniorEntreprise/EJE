@@ -1,5 +1,5 @@
 import axios from 'axios';
-const BASE_URL = 'http://102.211.210.43/api';
+const BASE_URL = 'https://ej-ebackend.vercel.app';
 
 export default axios.create({
     baseURL: BASE_URL

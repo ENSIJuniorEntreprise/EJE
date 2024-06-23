@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import logo from '/assets/logo.png';
+import pdf from "./EF 23-24.pdf"
 
 function Footer() {
   const [showFinancialReports, setShowFinancialReports] = useState(false);
@@ -59,7 +60,7 @@ function Footer() {
                   <li>
                     <a className="sm:text-base lg:text-xl hover:underline text-[#F1EFE2] font-photograph text-xl hover:text-[#2DA2DD] whitespace-nowrap" onClick={toggleFinancialReports}>Financial report</a>
                     {showFinancialReports && (<ul type="circle" className='text-[#F1EFE2]'>
-                      <li className='sm:text-base text-[#F1EFE2] font-photograph text-xl lg:text-xl hover:text-[#2DA2DD]'> 2023-2024</li>
+                      <li className='sm:text-base text-[#F1EFE2] font-photograph text-xl lg:text-xl hover:text-[#2DA2DD]'><a href={pdf}>2023-2024</a> </li>
                       <li className='sm:text-base text-[#F1EFE2] font-photograph text-xl lg:text-xl hover:text-[#2DA2DD]'> 2022-2023</li>
                       <li className='sm:text-base text-[#F1EFE2] font-photograph text-xl lg:text-xl hover:text-[#2DA2DD]'> 2021-2022</li>
                     </ul>)}

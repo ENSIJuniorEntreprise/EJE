@@ -7,7 +7,7 @@ const Event = () => {
     const [editableRows, setEditableRows] = useState({});
     const [editedItemData, setEditedItemData] = useState({});
     const [showPopup, setShowPopup] = useState(false);
-    const BaseUrl = "http://102.211.210.43/api"
+    const BaseUrl = "https://ej-ebackend.vercel.app"
 
 
     const fetchData = async () => {
