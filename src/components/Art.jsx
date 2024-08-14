@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import ArticlePopup from './ArticlePopup';
+import { BaseUrl } from './../api/axios'; 
+
 
 const Art = () => {
     const [data, setData] = useState([]);
     const [editableRows, setEditableRows] = useState({});
     const [editedItemData, setEditedItemData] = useState({});
     const [showPopup, setShowPopup] = useState(false);
-    const BaseUrl = "https://ej-ebackend.vercel.app"
 
 
     const fetchData = async () => {

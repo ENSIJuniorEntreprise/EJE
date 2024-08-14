@@ -152,11 +152,38 @@ export function About() {
             style={{ background: "#2DA2DD", zIndex: 1 }}
           />
         </div>
-        <div className="grid   gap-y-20 mt-[140px] max-md:hidden mxs:grid-cols-2 mxs:gap-x-16 dmd:grid-cols-3 sm:gap-x-20 dlg:gap-x-32">
-          {imageBlocks.map((block, index) => (
-            <ImageWithBlock key={index} {...block} />
-          ))}
-        </div>
+        {imageBlocks.length === 6 ? (
+  <div className="grid gap-y-20 mt-[140px] max-md:hidden mxs:grid-cols-2 mxs:gap-x-16 dmd:grid-cols-3 sm:gap-x-20 dlg:gap-x-32">
+    {imageBlocks.map((block, index) => (
+      <ImageWithBlock key={index} {...block} />
+    ))}
+  </div>
+) : imageBlocks.length === 7 ? (
+  <div className="flex flex-col items-center gap-y-20 mt-[140px] max-md:hidden mxs:grid-cols-2 mxs:gap-x-16 sm:gap-x-26 dlg:gap-x-32">
+    <div className="grid grid-cols-3 gap-x-4 w-full max-w-[calc(3*var(--gap-x))] justify-items-center">
+      {imageBlocks.slice(0, 3).map((block, index) => (
+        <ImageWithBlock key={index} {...block} />
+      ))}
+      {/* Ajout d'un espace vide pour centrer les éléments s'il y a moins de 3 éléments */}
+      {imageBlocks.length < 3 && <div></div>}
+    </div>
+    <div className="grid grid-cols-2 dlg:grid-cols-4 gap-x-16 w-full max-w-[calc(4*var(--gap-x))] justify-items-center">
+      {imageBlocks.slice(3).map((block, index) => (
+        <ImageWithBlock key={index + 3} {...block} />
+      ))}
+    </div>
+  </div>
+) : (
+  <div className="flex flex-col items-center gap-y-20 mt-[140px] max-md:hidden mxs:grid-cols-2 mxs:gap-x-16 sm:gap-x-20 dlg:gap-x-32">
+    {/* Cas par défaut ou pour d'autres nombres d'éléments */}
+    <div className="grid grid-cols-3 gap-x-4 w-full max-w-[calc(3*var(--gap-x))] justify-items-center">
+      {imageBlocks.map((block, index) => (
+        <ImageWithBlock key={index} {...block} />
+      ))}
+    </div>
+  </div>
+)}
+
         <BEcarousel />
       </div>
 

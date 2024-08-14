@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { BaseUrl } from './../api/axios'; 
+
 
 const EventPop = ({ togglePopup, fetchData }) => {
   const [newEventData, setNewEventData] = useState({
@@ -75,7 +77,7 @@ const EventPop = ({ togglePopup, fetchData }) => {
       const currentDate = new Date().toISOString().split('T')[0];
       const eventDataWithDate = { ...newEventData, date: currentDate };
 
-      const res = await axios.post("https://ej-ebackend.vercel.app/event", eventDataWithDate);
+      const res = await axios.post(`${BaseUrl}/event`, eventDataWithDate);
       console.log("New event added:", res.data);
       togglePopup();
       fetchData();

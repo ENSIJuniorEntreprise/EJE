@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Rectangle from '/assets/entreprise.png';
+import { BaseUrlContact } from './../../api/axios'; 
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -19,7 +21,7 @@ const Contact = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        'http://localhost:8000/send-email',
+        `${BaseUrl}/send-email`,
         formData
       );
       console.log('Form submission successful:', response.data);

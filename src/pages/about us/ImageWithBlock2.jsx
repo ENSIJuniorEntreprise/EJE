@@ -1,24 +1,45 @@
 import React, { useState, useEffect, useRef } from "react";
+import img1 from './img/Sofiene Trabelsi.jpg';
+import img2 from './img/Mouna Hachicha.jpg';
+import img3 from './img/Emna Aissaoui.jpg';
+import img4 from './img/Iyadh Gharbi.jpg';
+import img5 from './img/Selim Ketata.jpg';
+import img6 from './img/Maissa El Hamdi2.jpg';
+import img7 from './img/eje4.jpg';
+
+
+
+const images = {
+  'Sofiene Trabelsi.jpg': img1,
+  'Mouna Hachicha.jpg': img2,
+  'Emna Aissaoui.jpg':img3,
+  'Iyadh Gharbi.jpg':img4,
+  'Selim Ketata.jpg':img5,
+  'Maissa El Hamdi2.jpg':img6,
+  'eje4.jpg':img7,
+
+};
 
 const ImageWithBlock = ({ imagePath, altText, poste }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [showInnerBlock, setShowInnerBlock] = useState(false);
-  const [image, setImage] = useState(null);
+  // const [image, setImage] = useState(null);
+  const image = images[imagePath];
   const targetRef = useRef(null);
 
-  useEffect(() => {
-    const importImage = async () => {
-      try {
+  // useEffect(() => {
+  //   const importImage = async () => {
+  //     try {
           
-        const importedImage = await import(/* @vite-ignore */`./img/${imagePath}`);
-        setImage(importedImage.default);
-      } catch (error) {
-        console.error("Error importing image:", error);
-      }
-    };
+  //       const importedImage = await import(/* @vite-ignore */`./img/${imagePath}`);
+  //       setImage(importedImage.default);
+  //     } catch (error) {
+  //       console.error("Error importing image:", error);
+  //     }
+  //   };
 
-    importImage();
-  }, [imagePath]);
+  //   importImage();
+  // }, [imagePath]);
 
   useEffect(() => {
     const handleIntersection = (entries) => {

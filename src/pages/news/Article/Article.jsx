@@ -44,9 +44,9 @@ export function Article() {
         </div>
       </div>
       <div className="flex flex-col bg-[#e0ded3] items-center justify-center lg:gap-16 xxs:gap-6">
-        <h1 className="title text-4xl md:text-5xl lg:text-7xl font-bold my-8 font-proxima-nova-bold text-center yyxs:text-3xl">
+        <h1 className="title text-4xl md:text-5xl lg:text-6xl font-bold my-8 font-proxima-nova-bold text-center yyxs:text-3xl xxs:text-2xl">
           {state.title}
-          <div className="bg-[#2DA2DD] h-1 xxs:w-[40%] xxs:ml-[30%] mmmxs:ml-[0%] mmmxs:w-[25%]"></div>
+          <div className="bg-[#2DA2DD] h-1  mt-8 xxs:w-[40%] xxs:ml-[30%] mmmxs:ml-[0%] mmmxs:w-[25%] md:w-[70%]"></div>
         </h1>
 
 

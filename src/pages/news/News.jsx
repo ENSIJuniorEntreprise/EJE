@@ -5,6 +5,7 @@ import Search from "./Search";
 import FirstHighlight from "./FirstHighlight";
 import Banner from "./Banner";
 import Loader from '../../components/Loader';
+import { BaseUrl } from './../../api/axios'; 
 
 export function News() {
   const [articles, setArticles] = useState([]);
@@ -13,10 +14,9 @@ export function News() {
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true); // Add loading state
   const articlesPerPage = 3;
-  const BaseUrl = "https://ej-ebackend.vercel.app" 
 
   useEffect(() => {
-    fetch(`${BaseUrl}U/article/recent`)
+    fetch(`${BaseUrl}/article/recent`)
       .then(response => response.json())
       .then(data => {
         setArticles(data.articles);
@@ -33,7 +33,7 @@ export function News() {
   const handleSearch = (query) => {
     if (query) {
       setLoading(true); // Set loading to true when starting a search
-      fetch(`https://ej-ebackend.vercel.app/article/rz?search=${query}`)
+      fetch(`http://localhost:8000/article/rz?search=${query}`)
         .then(response => response.json())
         .then(data => {
           setSearchResults(data.articles);

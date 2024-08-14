@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import useAxiosPrivate from '../hooks/useAxioxPrivate';
 import axios from 'axios';
 import bcrypt from 'bcryptjs';
+import { BaseUrl } from './../api/axios'; 
+
 
 const AccountSettings = () => {
     const [admins, setAdmins] = useState([]);
@@ -9,7 +11,6 @@ const AccountSettings = () => {
     const [showAddAdminPopup, setShowAddAdminPopup] = useState(false);
     const [newAdminData, setNewAdminData] = useState({ fullName: '', username: '', password: '' });
     const axiosPrivate = useAxiosPrivate();
-    const BaseUrl = "https://ej-ebackend.vercel.app"
 
 
     const getUserData = async () => {

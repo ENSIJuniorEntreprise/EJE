@@ -70,7 +70,7 @@ function Carousel() {
 
 
 
-            <a href="http://localhost:3000/assets/brochure.pdf" target="_blank" without rel="noreferrer">
+            <a href="/assets/brochure.pdf" target="_blank" without rel="noreferrer">
               <Button bc='border-beige' tc='text-beige' bgc='bg-blue-400' className='font-proxima-nova font-bold cursor-pointer h-full button-animation btn-5'>
                 Download our brochure
               </Button></a>

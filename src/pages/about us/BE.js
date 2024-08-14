@@ -30,5 +30,6 @@ export const imageBlocks = [
       altText: "Maissa El Hamdi",
       poste: "COMMUNICATION & DESIGN MANAGER",
     },
+   
   ];
   

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios'; // Import Axios
+import { BaseUrl } from './../api/axios'; 
+
 
 const NewsletterDash = () => {
     const [subject, setSubject] = useState('');
@@ -11,7 +13,7 @@ const NewsletterDash = () => {
         const data = { subject, text };
 
         try {
-            const response = await axios.post('http://localhost:8000/subscriber/send', data, {
+            const response = await axios.post(`${BaseUrl}/subscriber/send`, data, {
                 headers: {
                     'Content-Type': 'application/json'
                 }

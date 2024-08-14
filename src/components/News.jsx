@@ -5,6 +5,8 @@ import "slick-carousel/slick/slick-theme.css";
 import team from "/assets/team.png";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
+import { BaseUrl } from './../api/axios'; 
+
 
 function News(){
   const [articles, setArticles] = useState([]);
@@ -12,7 +14,7 @@ function News(){
 
 
   useEffect(() => {
-    fetch('https://ej-ebackend.vercel.app/article/recent')
+    fetch(`${BaseUrl}/article/recent`)
       .then(response => response.json())
       .then(data => setArticles(data.articles))
       .catch(error => console.error('Error fetching articles:', error));
