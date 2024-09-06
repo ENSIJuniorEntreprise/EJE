@@ -1,5 +1,5 @@
 import axios from 'axios';
-const BASE_URL = 'http://localhost:8000';
+const BASE_URL = 'https://ensijuniorentreprise.com';
 
 export default axios.create({
     baseURL: BASE_URL
@@ -11,7 +11,7 @@ export const axiosPrivate = axios.create({
     withCredentials: true
 });
 
-export const BaseUrl = 'http://www.ensijuniorentreprise.com:8000/api';
+export const BaseUrl = 'https://ensijuniorentreprise.com/api';
 
-export const BaseUrlContact = 'http://www.ensijuniorentreprise.com:8000/';
+export const BaseUrlContact = 'https://ensijuniorentreprise.com';
 
