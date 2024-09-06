@@ -1,5 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import  logo  from "/assets/photoo.jpg";
+import web from "/assets/web.png"
+import mobile from "/assets/Mobile App.jpg"
+import chatbot from "/assets/chatbot.jpg"
+import desktop from "/assets/Desktop.jpg"
+
 
 const ServiceComponent = ({
   paragraphs,
@@ -31,23 +36,23 @@ const ServiceComponent = ({
 
   const pStyles = [
     {
-      backgroundImage: `url(${logo})`,
-      backgroundSize: "200%",
+      backgroundImage: `url(${web})`,
+      backgroundSize: "100%",
       backgroundPosition: "20% 45%",
     },
     {
-      backgroundImage: `url(${logo})`,
-      backgroundSize: "200%",
+      backgroundImage: `url(${mobile})`,
+      backgroundSize: "100%",
       backgroundPosition: "20% 45%",
     },
     {
-      backgroundImage: `url(${logo})`,
-      backgroundSize: "200%",
+      backgroundImage: `url(${chatbot})`,
+      backgroundSize: "100%",
       backgroundPosition: "20% 45%",
     },
     {
-      backgroundImage: `url(${logo})`,
-      backgroundSize: "200%",
+      backgroundImage: `url(${desktop})`,
+      backgroundSize: "100%",
       backgroundPosition: "20% 45%",
     }
   ];

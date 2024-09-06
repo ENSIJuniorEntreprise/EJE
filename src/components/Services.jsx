@@ -45,7 +45,7 @@ function Service(props){
   };
 
   return (
-    <Link to={`/services/${id}`} onClick={handleClick} className='hover:bg-dark-blue hover:scale-105'>
+    <Link to={`/services/${id}`} onClick={handleClick} className='hover:bg-dark-blue hover:scale-102'>
     <div className={`xxs:p-2 xxs:pb-15 xxxs:p-2 flex flex-col items-center font-proxima-nova border-[3px] p-7 dxl:w-[20vw] gap-5 ${borderStyle} `}>
       <div className='flex items-center justify-center'>
         <svg xmlns="http://www.w3.org/2000/svg" width='50' height='70' viewBox='0 0 60 50'>
@@ -63,7 +63,7 @@ function Services() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   return (
-<section className='xxs:px-4 xxxs:px-8 dark-blue-gradient flex flex-col justify-center items-center gap-[75px] py-[50px]'>
+<section className='xxs:px-4 xxxs:px-12 dark-blue-gradient flex flex-col justify-center items-center gap-[75px] py-[50px]'>
       <div className='xxs:mt-4 xxs:text-5xl text-beige font-proxima-nova-bold xl:text-7xl'><span className='text-light-blue font-proxima-nova-bold'>Our </span>services</div>
       <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4  gap-5 justify-center'>
         {items.map((item, index) => (

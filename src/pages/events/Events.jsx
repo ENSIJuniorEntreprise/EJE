@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { lazy, useState } from 'react';
 import SlickSlider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -20,13 +20,12 @@ import Anniv2 from "/assets/annivv.JPG"
 import EJIS from "/assets/_DSC8105.jpg"
 import Forum from "/assets/forum.JPG"
 
-
 const events = [
-  { id: 1, date: "2022", month: "June", title1: "Hack'prise", title2: "2.0", description: "ENSI Junior Entreprise continues its tradition of innovation by offering students the best opportunities to immerse themselves in the professional world. This commitment gave rise to HackPrise, a hackathon that challenges participants to devise solutions to IT and entrepreneurial problems proposed by renowned companies. This year's HackPrise will take place in June as a fully online event, attracting participants nationwide and internationally, ensuring diverse representation. In collaboration with partners such as INFOR, a cloud technology leader, and STB, a prestigious bank, HackPrise 1.0 achieved significant success with over 200 participants, 80 teams, 10 published articles, and 8000 DT in rewards. Following this success, HackPrise 2.0 saw more than 250 participants and 97 teams from Value and Euranova competing in data science challenges, guided by technical support, and competing for valuable prizes.", image: hackprise },
-  { id: 2, date: "2024", month: "April", title1: "18th", title2: "anniversary", description: "The EJE anniversary celebration brought together members from all the junior enterprises for a spirited football match, fostering camaraderie and teamwork. This vibrant event not only marked the anniversary but also strengthened the bonds among participants, creating lasting memories and reinforcing the sense of community within the junior enterprise network.", image: Anniv2 },
-  { id: 3, date: "2023", month: "February", title1: "17th", title2: "anniversary", description: "The EJE anniversary celebration brought together members from all the junior enterprises for a spirited football match, fostering camaraderie and teamwork. This vibrant event not only marked the anniversary but also strengthened the bonds among participants, creating lasting memories and reinforcing the sense of community within the junior enterprise network.", image: Anniv1 },
-  { id: 4, date: "2021", month: "November", title1: "Annual forum", title2: "16th edition", description: "The 16th edition of the Annual Forum by ENSI Junior Entreprise, scheduled for November 2021, will spotlight the theme 'The Fintech and Regtech Tandem: A New Era of Financial Expansion.' This event underscores the innovative convergence of financial technology and regulatory technology, highlighting their combined potential to revolutionize the financial sector. Attendees will explore how Fintech innovations are transforming financial services and how Regtech solutions are ensuring regulatory compliance in this rapidly evolving landscape. The forum promises engaging discussions, networking opportunities, and insights from industry leaders, aiming to inspire and educate participants on the future of finance.", image: Forum },
-  { id: 5, date: "2024", month: "January", title1: "Get", title2: "Entrepreneurial", description: "The Get Entrepreneurial event, scheduled for January 24, 2024, at UTICA, is designed to provide a platform for young entrepreneurs, start-ups, and project creators to present their ideas to incubators and market professionals. This B2B trade fair also offers recent graduates a deeper immersion into the professional world, allowing direct interaction with B2B and B2C companies and attendance at various conferences. The event's theme, 'Innovation and Entrepreneurship for a Sustainable Future' aims to raise awareness, inspire creativity, educate on best practices, facilitate collaboration, and encourage actionable initiatives in sustainable entrepreneurship. Key discussion topics include entrepreneurial education, innovation-driven growth, sustainable start-up financing, and corporate social responsibility.", image: get },
+  { id: 1, date: "2022", month: "Jun", title1: "Hack'prise", title2: "2.0", description: "ENSI Junior Entreprise continues its tradition of innovation by offering students the best opportunities to immerse themselves in the professional world. This commitment gave rise to HackPrise, a hackathon that challenges participants to devise solutions to IT and entrepreneurial problems proposed by renowned companies. This year's HackPrise will take place in June as a fully online event, attracting participants nationwide and internationally, ensuring diverse representation. In collaboration with partners such as INFOR, a cloud technology leader, and STB, a prestigious bank, HackPrise 1.0 achieved significant success with over 200 participants, 80 teams, 10 published articles, and 8000 DT in rewards. Following this success, HackPrise 2.0 saw more than 250 participants and 97 teams from Value and Euranova competing in data science challenges, guided by technical support, and competing for valuable prizes.", image: hackprise },
+  { id: 2, date: "2024", month: "Apr", title1: "18th", title2: "anniversary", description: "The EJE anniversary celebration brought together members from all the junior enterprises for a spirited football match, fostering camaraderie and teamwork. This vibrant event not only marked the anniversary but also strengthened the bonds among participants, creating lasting memories and reinforcing the sense of community within the junior enterprise network.", image: Anniv2 },
+  { id: 3, date: "2023", month: "Feb", title1: "17th", title2: "anniversary", description: "The EJE anniversary celebration brought together members from all the junior enterprises for a spirited football match, fostering camaraderie and teamwork. This vibrant event not only marked the anniversary but also strengthened the bonds among participants, creating lasting memories and reinforcing the sense of community within the junior enterprise network.", image: Anniv1 },
+  { id: 4, date: "2021", month: "Nov", title1: "Annual forum", title2: "16th", description: "The 16th edition of the Annual Forum by ENSI Junior Entreprise, scheduled for November 2021, will spotlight the theme 'The Fintech and Regtech Tandem: A New Era of Financial Expansion.' This event underscores the innovative convergence of financial technology and regulatory technology, highlighting their combined potential to revolutionize the financial sector. Attendees will explore how Fintech innovations are transforming financial services and how Regtech solutions are ensuring regulatory compliance in this rapidly evolving landscape. The forum promises engaging discussions, networking opportunities, and insights from industry leaders, aiming to inspire and educate participants on the future of finance.", image: Forum },
+  { id: 5, date: "2024", month: "Jan", title1: "Get", title2: "Entrepreneurial", description: "The Get Entrepreneurial event, scheduled for January 24, 2024, at UTICA, is designed to provide a platform for young entrepreneurs, start-ups, and project creators to present their ideas to incubators and market professionals. This B2B trade fair also offers recent graduates a deeper immersion into the professional world, allowing direct interaction with B2B and B2C companies and attendance at various conferences. The event's theme, 'Innovation and Entrepreneurship for a Sustainable Future' aims to raise awareness, inspire creativity, educate on best practices, facilitate collaboration, and encourage actionable initiatives in sustainable entrepreneurship. Key discussion topics include entrepreneurial education, innovation-driven growth, sustainable start-up financing, and corporate social responsibility.", image: get },
   { id: 6, date: "2018", month: "", title1: "EJIS", title2: "", description: "The ENSI Junior Enterprise Association aims to immerse its members in professional and entrepreneurial life, emphasizing collaboration and effective communication. The ENSI Junior Integration Seminar (EJIS) is a full day of team-building activities designed to strengthen member relationships. The seminar also showcases the association's impact on alumni careers, inspiring new members and fostering a sense of belonging to the EJE family.", image: EJIS },
 
 ]
@@ -145,7 +144,7 @@ function Events() {
               />
             </div>
 
-            <div className='flex justify-center xxs:relative xxs:top-[-30px] mmmxs:top-[-50px] md:top-[0px] md:left-[-70px] md:w-[350px] lg:w-[470px] lg:left-[-30px]'>
+            <div className='flex justify-center xxs:relative xxs:top-[-20px] mmmxs:top-[-20px] md:top-[0px] md:left-[-70px] md:w-[350px] lg:w-[470px] lg:left-[-30px]'>
               <Card
                 title1="GET"
                 title2="Entrepreneurial"
@@ -173,10 +172,10 @@ function Events() {
               />
             </div>
 
-            <div className='flex justify-center xxs:relative xxs:top-[-30px] mmmxs:top-[-50px] md:top-[0px] md:right-[-70px] md:w-[350px] lg:w-[470px] lg:right-[-30px]'>
+            <div className='flex justify-center xxs:relative xxs:top-[-20px] mmmxs:top-[-20px] md:top-[0px] md:right-[-70px] md:w-[350px] lg:w-[470px] lg:right-[-30px]'>
               <Card
                 title1="Hack'Prise"
-                title2="3.0"
+                title2="2.0"
                 text="Hack'Prise is an innovative online hackathon fostering interdisciplinary collaboration and creative problem-solving."
                 isBlueTitle={false}
               />
@@ -235,19 +234,19 @@ function Events() {
                   <img
                     alt="gallery"
                     class="block h-full w-full object-cover object-center"
-                    src={img3} />
+                    src={img3} onLoad={lazy}/>
                 </div>
                 <div class="w-1/2 p-1 md:p-2">
                   <img
                     alt="gallery"
                     class="block h-full w-full object-cover object-center"
-                    src={img4} />
+                    src={img4} onLoad={lazy}/>
                 </div>
                 <div class="w-full p-1 md:p-2">
                   <img
                     alt="gallery"
                     class="block h-full w-full object-cover object-center"
-                    src={img1} />
+                    src={img1} onLoad={lazy}/>
                 </div>
               </div>
               <div class="flex xxs:w-[100%] md:w-1/2 flex-wrap">
@@ -255,19 +254,20 @@ function Events() {
                   <img
                     alt="gallery"
                     class="block h-full w-full object-cover object-center"
-                    src={img2} />
+                    src={img2} onLoad={lazy}/>
                 </div>
                 <div class="w-1/2 p-1 md:p-2">
                   <img
                     alt="gallery"
                     class="block h-full w-full object-cover object-center"
-                    src={img6} />
+                    src={img6} onLoad={lazy} />
                 </div>
                 <div class="w-1/2 p-1 md:p-2">
                   <img
                     alt="gallery"
                     class="block h-full w-full object-cover object-center"
-                    src={img5} />
+                    src={img5} 
+                    onLoad={lazy}/>
                 </div>
               </div>
             </div>

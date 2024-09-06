@@ -7,8 +7,6 @@ export function Article() {
   const location = useLocation();
   const { state } = location;
 
-  console.log(state); 
-
 
   let article0 = {
     cover:
@@ -22,10 +20,21 @@ export function Article() {
     backgroundImage: `url(${bannerImg})`,
     backgroundSize: "cover",
   };
+
+  const paragraphs = state.content.split('**').map((paragraph, index) => (
+    <span key={index}>
+      {paragraph.trim()}
+      <br />
+      <br />
+    </span>
+  ));
+
+  console.log("paraaaa",paragraphs)
+
   return (
     <div>
       <div className="bg-[#1F2029]">
-        <div className="relative h-[300px] w-[100%] flex items-center justify-center xl:h-[500px] lg:h-[400px] md:h-[400px] sm:h-[300px] yxs:h-[250px]">
+        <div className="relative h-[300px] w-[100%] flex items-center justify-center xl:h-[500px] xxs:h-[400px]">
           <div
             className="opacity-30"
             style={{
@@ -44,16 +53,16 @@ export function Article() {
         </div>
       </div>
       <div className="flex flex-col bg-[#e0ded3] items-center justify-center lg:gap-16 xxs:gap-6">
-        <h1 className="title text-4xl md:text-5xl lg:text-6xl font-bold my-8 font-proxima-nova-bold text-center yyxs:text-3xl xxs:text-2xl">
+        <h1 className="title text-4xl md:text-5xl lg:text-5xl font-bold my-8 font-proxima-nova-bold text-center yyxs:text-3xl xxs:text-2xl">
           {state.title}
-          <div className="bg-[#2DA2DD] h-1  mt-8 xxs:w-[40%] xxs:ml-[30%] mmmxs:ml-[0%] mmmxs:w-[25%] md:w-[70%]"></div>
+          <div className="bg-[#2DA2DD] h-1  mt-8 xxs:w-[80%]  mmmxs:ml-[0%] mmmxs:w-[80%] md:w-[70%]"></div>
         </h1>
 
 
         <div className="flex flex-col justify-center items-center gap-[25px] lg:flex lg:flex-row lg:gap-[50px] lg:w-[85%] xl:w-[80%] xl:gap-[35px]">
 
           {/* image et cadre */}
-          <div className="flex flex-col w-full justify-start xxs:items-start lg:items-start relative xxs:w-[80%] xxs:ml-[5%] mmmxs:ml-[20%] sm:items-center sm:ml-[0%] lg:ml-[0%] lg:w-[30%] xl:w-[30%] ">
+          <div className="flex flex-col w-full justify-start xxs:items-start lg:items-start relative xxs:w-[80%] xxs:ml-[5%] mmmxs:ml-[20%] sm:items-center sm:ml-[0%] lg:ml-[0%] lg:w-[30%] xl:w-[30%] xxs:hidden md:block">
             <div className="bg-[#2DA2DD] absolute xxs:top-[6vw] lg:top-[20px] w-[400px] h-[400px] xxs:w-[90%] xxs:h-[70vw] mmmxs:w-[70%] mmmxs:h-[54vw] sm:w-[60%] sm:h-[44vw] mdd:w-[50%] mdd:h-[36vw] lg:w-[270px] lg:h-[270px] "></div>
             <div className="w-[400px] relative h-[20px]  lg:ml-[20px] xxs:w-[90%] xxs:h-[80vw] xxs:ml-[5%] mmmxs:w-[70%] mmmxs:h-[60vw] sm:w-[60%] sm:h-[50vw] mdd:w-[50%] mdd:h-[45vw] lg:w-[270px] lg:h-[270px]" style={{ zIndex: 1 }}>
               <img src={image} alt="Banner" className="w-[100%] h-[100%] object-cover" />
@@ -64,7 +73,7 @@ export function Article() {
 
 
 
-          <div className="w-[80%] p-8 xxs:h-auto  left-0 bg-[#1F2029] h-[200px] lg:w-[70%]  lg:h-[270px] xl:w-[80%]">
+          <div className="w-[85%] p-8 xxs:h-auto  left-0 bg-[#1F2029] h-[200px] lg:w-[70%]  lg:h-[270px] xl:w-[80%]">
             <div className="details text-[#2eaded] font-montserrat md:text-2xl 2xl:text-3xl ">
               <span>{new Date(state.submissionDate).toLocaleDateString()}</span>
             </div>
@@ -79,7 +88,7 @@ export function Article() {
 
         <div className="flex bg-white  bg-opacity-[49%] xxs:w-[85%]    h-auto  xxs:p-6 md:p-16 lg:w-[85%] xl:w-[80%] ">
           <p className="text-[#1F2029] font-proxima-nova-regular md:text-2xl 2xl:text-3xl">
-            {state.content}
+          {paragraphs}
           </p>
         </div>
         <br />
@@ -88,3 +97,4 @@ export function Article() {
     </div>
   );
 }
+

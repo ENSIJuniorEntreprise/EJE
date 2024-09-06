@@ -11,8 +11,8 @@ const Login = () => {
   const from = location.state?.from?.pathname || "/";
 
   const [info, setInfo] = useState({
-    username: "EJE@gmail.com",
-    password: "EJE",
+    username: "",
+    password: "",
   });
 
   const [remember, setRemember] = useState(false);

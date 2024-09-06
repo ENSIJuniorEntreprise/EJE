@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Valeur from "./Value";
 import Valeurs from "./Valeurs";
+import { lazy } from "react";
 
 export function About() {
   return (
@@ -18,14 +19,14 @@ export function About() {
           <div className="border p-[1%] pl-4 pr-4 dlg:pr-[3%] dlg:pl-[3%] md:w-[600px] xxs:w-[90vw] mmmxs:w-[80vw] h-28 flex xxs:flex-col xs:flex-row items-center justify-center"
             style={{ backgroundColor: "rgba(31, 32, 41, 0.8)", borderColor: "#2DA2DD", borderWidth: "4px", zIndex: 1, whiteSpace: "pre-line", }}>
             <span
-              className="md:text-[55px] font-bold proxima-nova-extrabold xxs:text-4xl mxms:text-5xl text-center"
+              className="md:text-[55px] font-bold proxima-nova-extrabold xxs:text-3xl mxms:text-5xl text-center"
               style={{ color: "#2DA2DD" }}
             >
               ENSI&nbsp;
             </span>
 
             <span
-              className="md:text-[55px] font-bold proxima-nova-extrabold xxs:text-4xl mxms:text-5xl text-center"
+              className="md:text-[55px] font-bold proxima-nova-extrabold xxs:text-3xl mxms:text-5xl text-center"
               style={{ color: "#E0DED2" }}
             >
               Junior&nbsp;Enterprise
@@ -41,7 +42,7 @@ export function About() {
         <div className=" w-[100%] h-[100%]  relative xxs:rounded-br-[180px] sm:rounded-br-[200px] xxs:grid xxs:grid-cols-1 md:grid md:grid-cols-2 md:gap-y-[30px] ddlg:gap-y-[50px]  md:rounded-br-[200px] dlg:rounded-br-[260px] dxl:rounded-br-[270px] " style={{ backgroundColor: "rgba(224, 222, 210, 0.8)", }}>
 
           <div className="w-[100%] h-[100%] xxs:relative  flex xxs:flex-col xxs:mt-6 xxs:order-2 md:order-1">
-            <div className="xxs:w-[90%] xxs:h-[200px] mmxs:w-[80%] mmxs:h-[250px] mmxs:ml-[10%] mxs:w-[70%] mxs:h-[280px] mxs:ml-[15%] sm:w-[60%] sm:h-[280px] sm:ml-[20%]   md:w-[90%] md:h-[30vw] md:ml-[5%] ddlg:w-[80%] ddlg:ml-[10%] ddlg:h-[25vw] z-10" style={{ backgroundImage: `url(${eje})`, backgroundSize: "cover", backgroundPosition: "center" }}></div>
+            <div className="xxs:w-[90%] xxs:h-[200px] mmxs:w-[80%] mmxs:h-[250px] mmxs:ml-[10%] mxs:w-[70%] mxs:h-[280px] mxs:ml-[15%] sm:w-[60%] sm:h-[280px] sm:ml-[20%]   md:w-[90%] md:h-[30vw] md:ml-[5%] ddlg:w-[80%] ddlg:ml-[10%] ddlg:h-[25vw] z-10" style={{ backgroundImage: `url(${eje})`, backgroundSize: "cover", backgroundPosition: "center" }} onLoad={lazy}></div>
             <div className="xxs:w-[90%] xxs:h-[200px] mmxs:w-[80%] mmxs:h-[250px] mmxs:ml-[10%] mxs:w-[70%] mxs:h-[280px] mxs:ml-[15%] sm:w-[60%] sm:h-[280px] sm:ml-[20%]  xxs:absolute xxs:top-[15px] xxs:left-4 md:w-[90%] md:h-[30vw] md:ml-[2%] md:left-[-3px] ddlg:w-[80%] ddlg:ml-[10%] ddlg:h-[25vw] ddlg:left-[-15px] top-0 bg-light-blue absolute z-0"></div>
           </div>
 

@@ -8,7 +8,7 @@ const DownloadButton = () => {
   };
 
   return (
-    <div className="lg:w-96 h-20 flex items-center justify-center gap-6 sm:w-[37vw]" >
+    <div className="lg:w-96 h-20 flex items-center justify-center gap-6 sm:w-[37vw]">
       <img src={downloadIcon} className="w-12 h-12" alt="download icon" />
       <div className="ser:text-base text-[#1F2029] font-semibold text-lg">Download Here</div>
     </div>

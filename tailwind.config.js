@@ -58,6 +58,10 @@ module.exports = {
       backgroundGradientPatterns: {
         'sm': 'radial-gradient(circle at 52% 50%, rgba(45, 162, 221, 0.2) 0, transparent 60%), radial-gradient(circle at 52% 50%, rgba(45, 162, 221, 0.2) 0, transparent 60%)',
       },
+      scale: {
+        '98': '.98',
+        '102': '1.02',
+      },
     },
     colors: colors,
   },

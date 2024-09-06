@@ -4,8 +4,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import team from "/assets/team.png";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { BaseUrl } from './../api/axios'; 
+import Button from './Button';
 
 
 function News(){
@@ -41,7 +42,7 @@ function News(){
           autoplay: true,
           pauseOnHover: false,
           arrows: false,
-          autoplaySpeed: 1000,
+          autoplaySpeed: 3000,
           slidesToShow: 1,
           slidesToScroll: 1,
         },
@@ -56,10 +57,13 @@ function News(){
 
   return (
     <div>
-      <section className='xs:px-[2%] py-[50px] mxms:px-[4%] md:px-[9%] ddmd:px-[5%] dlg:px-[9%] bg-beige font-Montserrat flex flex-col gap-[45px]'>
+      <section className='xs:px-[2%] py-[50px] mxms:px-[4%] md:px-[9%] ddmd:px-[5%] dlg:px-[9%] bg-beige font-Montserrat flex flex-col gap-[30px]'>
         <h1 className='xxs:text-[2.6rem] text-dark-blue md:text-7xl font-medium text-center font-proxima-nova-bold' style={{ lineHeight: '1' }}>
           <span className='text-light-blue font-proxima-nova-bold'>Latest</span> Events <span className='text-light-blue font-proxima-nova-bold'>&</span> News
         </h1>
+        <Link to="/news">
+        <div className='text-center'><span className='font-black text-light-blue'>Click here </span> to stay updated with the Latest Events and Headlines! </div>
+        </Link>
         <div className='slick-slider-container'>
           <SlickSlider {...settings}>
             {articles.map((item, index) => (

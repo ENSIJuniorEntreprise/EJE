@@ -27,7 +27,7 @@ export function BEcarousel() {
     dots: true,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     pauseOnHover: true,
     centerMode: true,
     centerPadding: "0px", // Adjust this value as needed

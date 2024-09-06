@@ -27,10 +27,10 @@ export function Services() {
   };
 
   const Services = [
-    { id:0, text: "web development" },
-    { id:1, text: "mobile development" },
-    { id:2, text: "Chatbot" },
-    { id:3, text: "Desktop application" },
+    { id:0, text: "web development", image:web},
+    { id:1, text: "mobile development", image:mobile },
+    { id:2, text: "Chatbot", image:chatbot },
+    { id:3, text: "Desktop application", image:desktop },
   ];
 
   const onHover = (event) => {
@@ -300,14 +300,15 @@ const testemonieParts = [
             <div className='bg-dark-blue flex flex-col justify-center items-center gap-3 text-beige p-4 lg:p-8'><h1 className='text-3xl'>Our Portfolio</h1>
               <p className='opacity-90 text-center'>Discover the core of our services</p>
             </div>
-
             <div className=' border-[3px] border-gradient-dark-blue flex justify-center items-center gap-5 px-8 font-medium md:row-start-2'>
+            <a href="/assets/Project Portfolio EJE.pdf" target="_blank" without rel="noreferrer">
             <DownloadButton />
+            </a>
             </div>
 
             <div className='bg-light-blue flex flex-col justify-center items-center gap-3 text-beige p-4 lg:p-8'>
               <h1 className='text-3xl'>Work With Us</h1>
-              <p className='opacity-90 text-center'>Lorem ipsum dolor sit amet</p>
+              <p className='opacity-90 text-center'>Where Your Vision Meets Our Expertise</p>
             </div>
 
             <div className=' border-[3px] border-gradient-blue flex items-center justify-center gap-5 px-8 font-medium' >

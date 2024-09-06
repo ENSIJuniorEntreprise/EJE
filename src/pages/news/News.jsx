@@ -32,21 +32,19 @@ export function News() {
 
   const handleSearch = (query) => {
     if (query) {
-      setLoading(true); // Set loading to true when starting a search
-      fetch(`http://localhost:8000/article/rz?search=${query}`)
+      fetch(`${BaseUrl}/article/${query}`)
         .then(response => response.json())
         .then(data => {
-          setSearchResults(data.articles);
-          setLoading(false); // Set loading to false after search results are fetched
+          setSearchResults(data.articles); // Ensure search results are stored in state
         })
         .catch(error => {
           console.error('Error fetching search results:', error);
-          setLoading(false); // Set loading to false even if there is an error
         });
     } else {
-      setSearchResults([]);
+      setSearchResults([]); // Clear search results if the query is empty
     }
   };
+  
 
   const startIndex = (currentPage - 1) * articlesPerPage;
   const endIndex = startIndex + articlesPerPage;

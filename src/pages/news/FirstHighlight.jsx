@@ -14,9 +14,11 @@ function FirstHighLight({ photo, submissionDate, title, description , content })
         <div className="text-xl xxs:hidden md:text-3xl  lg:block lg:text-5xl xl:text-5xl 2xl:text-5xl    text-[#2DA2DD] font-photograph-signature lg:mb-4">
           On the front page
         </div>
-        <h2 className="title xxs:hidden text-2xl lg:block lg:text-4xl xl:text-5xl 2xl:text-4xl font-semibold  border-[#2eaded] font-proxima-nova-bold text-[#1F2029] " style={{ maxHeight: "calc(1.5em * 4)", overflow: "hidden", display: "-webkit-box", WebkitBoxOrient: "vertical", WebkitLineClamp: 2 }}>
+        <div className="xxs:hidden lg:block">
+        <h2 className="xxs:hidden text-2xl lg:block lg:text-4xl xl:text-5xl 2xl:text-4xl font-semibold  border-[#2eaded] font-proxima-nova-bold text-[#1F2029] " style={{ maxHeight: "calc(1.5em * 4)", overflow: "hidden", display: "-webkit-box", WebkitBoxOrient: "vertical", WebkitLineClamp: 2 }}>
           {title}
         </h2>
+        </div>
         <div className="bg-[#2DA2DD] xxs:hidden lg:block h-[0.15rem] w-[15vw] mb-4"></div>
         <div className="details text-[#1F2029] mb-2 opacity-[78%] font-montserrat text-lg md:text-xl xl:text-2xl">
           <span>{new Date(submissionDate).toLocaleDateString()}</span>
@@ -36,7 +38,7 @@ function FirstHighLight({ photo, submissionDate, title, description , content })
       <div className="text-xl xxs:text-5xl xxs:pb-4 xxs:text-center font-photograph-signature lg:hidden sm:text-5xl   text-[#2DA2DD]">
           On the front page
         </div>
-        <h2 className="title xxs:pl-4 xxs:text-[1.6rem] mmmxs:pl-8 mxs:text-3xl xsm:pl-[10%] sm:text-4xl xxs:font-proxima-nova-bold md:text-5xl lg:text-5xl xl:text-7xl 2xl:text-8xl  lg:hidden font-semibold  border-[#2eaded] font-montserrat text-[#1F2029] ">
+        <h2 className="title xxs:pl-4 mxs:max-w-[95%] xxs:text-[1.4rem] mmmxs:pl-8 mxs:text-3xl xsm:pl-[10%] sm:text-4xl xxs:font-proxima-nova-bold md:text-5xl lg:text-5xl xl:text-7xl 2xl:text-8xl  lg:hidden font-semibold  border-[#2eaded] font-montserrat text-[#1F2029] ">
           {title}
         </h2>
         <div className="bg-[#2DA2DD] xxs:ml-4 mmmxs:ml-8 xsm:ml-[10%] h-[0.15rem] xxs:w-[50vw] mmxs:w-[35vw] mxs:w-[25vw] lg:hidden  mb-4"></div>
