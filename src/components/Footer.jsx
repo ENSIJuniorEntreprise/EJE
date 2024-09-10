@@ -55,7 +55,7 @@ function Footer() {
                   <a href="/assets/Documents/Statuts-de-l_ENSI-Junior-Entreprise-1.pdf" target="_blank" without rel="noreferrer" className="sm:text-base lg:text-xl hover:underline text-[#F1EFE2] font-photograph text-xl hover:text-[#2DA2DD]">Status</a>
                 </li>
                 <li>
-                  <a href="/assets/Documents/Rapport-Moral-Et-Financier-de-lENSI-JE-Mandat-22-23.pdf" target="_blank" without rel="noreferrer" className="sm:text-base lg:text-xl hover:underline text-[#F1EFE2] font-photograph text-xl hover:text-[#2DA2DD] ">Moral Report</a>
+                  <a href="#" target="_blank" without rel="noreferrer" className="sm:text-base lg:text-xl hover:underline text-[#F1EFE2] font-photograph text-xl hover:text-[#2DA2DD] ">Moral Report</a>
                 </li>
                 <li>
                   <a className="sm:text-base lg:text-xl hover:underline text-[#F1EFE2] font-photograph text-xl hover:text-[#2DA2DD] whitespace-nowrap" onClick={toggleFinancialReports}>Financial report</a>

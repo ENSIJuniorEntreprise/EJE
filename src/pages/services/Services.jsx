@@ -9,6 +9,8 @@ import web from "/assets/web.png"
 import mobile from "/assets/Mobile App.jpg"
 import chatbot from "/assets/chatbot.jpg"
 import desktop from "/assets/Desktop.jpg"
+import dali from "./dali.jpg"
+import islem from "./islem.jpg"
 
 
 
@@ -133,32 +135,19 @@ export function Services() {
 const testemonieParts = [
   {
     id: "2",
-    bannerImg: bannerImg,
-    name: "Jane Smith",
+    bannerImg: dali,
+    name: "Mohamed Ali Melki",
     description:
-      "Working with the association was a breeze! Their attention to detail and commitment made our mobile app development project a success. Highly recommended.",
+      "I was truly amazed by the level of skill and dedication shown by these young students throughout our project. It’s an experience I would repeat without hesitation, and I highly recommend their services to anyone seeking fresh and innovative solutions.",
   },
   {
     id: "3",
-    bannerImg: bannerImg,
-    name: "David Wilson",
+    bannerImg: islem,
+    name: "Mouhamed Islam Sakouhi",
     description:
-      "ENSI Junior Enterprise's expertise in web development is unmatched. They created a responsive, SEO-optimized website for us that has significantly boosted our online presence and customer engagement.",
+      "I had the opportunity to collaborate with three generations of the ENSI Junior Enterprise since I was a preparatory student. I was always fascinated by their fluid communication and the quality of their services. ENSI Junior Enterprise was an excellent collaborator.",
   },
-  {
-    id: "4",
-    bannerImg: bannerImg,
-    name: "Sarah Martinez",
-    description:
-      "I'm thrilled with the service provided by ENSI Junior Enterprise. Their team is knowledgeable, responsive, and dedicated to delivering high-quality solutions. I look forward to working with them again.",
-  },
-  {
-    id: "1",
-    bannerImg: bannerImg,
-    name: "John Doe",
-    description:
-      "I was amazed by the professionalism and quality of service provided by the team at the organisation. They transformed our website into a modern, user-friendly platform that exceeded our expectations.",
-  },
+
 ];
 
 
