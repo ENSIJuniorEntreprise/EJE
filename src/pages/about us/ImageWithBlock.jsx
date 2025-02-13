@@ -1,21 +1,23 @@
 import React, { useState, useEffect } from "react";
-import img1 from './img/Sofiene Trabelsi.jpg';
-import img2 from './img/Mouna Hachicha.jpg';
-import img3 from './img/Emna Aissaoui.jpg';
-import img4 from './img/Iyadh Gharbi.jpg';
-import img5 from './img/Selim Ketata.jpg';
-import img6 from './img/Maissa El Hamdi2.jpg';
+import img1 from './img/Mohamed Lahiani.jpg'
+import img2 from './img/Islem Nasri.jpg';
+import img3 from './img/Amine Fakhfekh.jpg';
+import img4 from './img/Syrine Hammami.jpg';
+import img5 from './img/Rawen Sahraoui.jpg';
+import img6 from './img/Oumayma Riahi.jpg';
+import img8 from './img/Takwa Abdellaoui.jpg';
 import img7 from './img/eje4.jpg';
 
 
 
 const images = {
-  'Sofiene Trabelsi.jpg': img1,
-  'Mouna Hachicha.jpg': img2,
-  'Emna Aissaoui.jpg':img3,
-  'Iyadh Gharbi.jpg':img4,
-  'Selim Ketata.jpg':img5,
-  'Maissa El Hamdi2.jpg':img6,
+  'Mohamed Lahiani.jpg': img1,
+  'Islem Nasri.jpg': img2,
+  'Amine Fakhfekh.jpg':img3,
+  'Rawen Sahraoui.jpg':img5,
+  'Syrine Hammami.jpg':img4,
+  'Takwa Abdellaoui.jpg':img8,
+  'Oumayma Riahi.jpg':img6,
   'eje4.jpg':img7,
 
 };

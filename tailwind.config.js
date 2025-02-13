@@ -44,7 +44,7 @@ module.exports = {
         '2xl': '1536px',
         'yxs': '300px',
 
-        
+
       },
       fontFamily: {
         Montserrat: ['Montserrat', ...defaultTheme.fontFamily.sans],

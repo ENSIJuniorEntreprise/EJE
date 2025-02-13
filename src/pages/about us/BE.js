@@ -1,35 +1,40 @@
-
 export const imageBlocks = [
   {
-    imagePath: "Emna Aissaoui.jpg",
-    altText: "Emna Aissaoui",
-    poste: "BUSINESS DEVELOPMENT\nMANAGER",
+    imagePath: "Amine Fakhfekh.jpg",
+    altText: "Amine Fakhfekh",
+    poste: "TREASURER",
   },
     {
-      imagePath: "Sofiene Trabelsi.jpg",
-      altText: "Sofiene Trabelsi",
+      imagePath: "Mohamed Lahiani.jpg",
+      altText: "Mohamed Lahiani",
       poste: "PRESIDENT",
     },
     {
-      imagePath: "Mouna Hachicha.jpg",
-      altText: "Mouna Hachicha",
+      imagePath: "Islem Nasri.jpg",
+      altText: "Islem Nasri",
       poste: "GENERAL SECRETARY",
     },
     {
-      imagePath: "Selim Ketata.jpg",
-      altText: "Selim Ketata",
-      poste: "OPERATION MANAGER",
-    },
-    {
-      imagePath: "Iyadh Gharbi.jpg",
-      altText: "Iyadh Gharbi",
+      imagePath: "Syrine Hammami.jpg",
+      altText: "Syrine Hammami",
       poste: "HUMAN RESOURCES\nDIRECTOR",
     },
     {
-      imagePath: "Maissa El Hamdi2.jpg",
-      altText: "Maissa El Hamdi",
+      imagePath: "Rawen Sahraoui.jpg",
+      altText: "Rawen Sahraoui",
+      poste: "OPERATION MANAGER",
+    },
+    {
+      imagePath: "Takwa Abdellaoui.jpg",
+      altText: "Takwa Abdellaoui",
+      poste: "BUSINESS DEVELOPMENT\nMANAGER",
+    },
+    {
+      imagePath: "Oumayma Riahi.jpg",
+      altText: "Oumayma Riahi",
       poste: "COMMUNICATION & DESIGN MANAGER",
     },
+   
    
   ];
   
